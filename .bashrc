@@ -19,6 +19,10 @@ shopt -s histappend
 HISTSIZE=9000000
 HISTFILESIZE=92000000
 
+# for personal workspace use
+NODE_ENV=local
+ENVIRONMENT=staging
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -87,16 +91,33 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+# devlopement aliases
+alias dc="docker-compose"
+alias dops="docker ps"
+alias dcps="docker-compose ps"
+alias dcon="docker-compose up --force-recreate -d";
+alias dcoff="docker-compose down -v --remove-orphans"
+alias dckill="docker-compose down --rmi all -v --remove-orphans";
+alias doxit="docker exec -it"
+alias kc="kafkacat"
+alias dockerprune="docker system prune; docker network prune; docker volume prune"
+
+# ssh aliases
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Sre aliases
+alias tf11='tf11'
+alias tf='terraform'
+
 #Personal aliases
 ### Get os name via uname ###
 alias myos="$(uname)"
 alias verison='cat /proc/version'
-alias ws='cd ~/Workspace1'
+alias ws='cd ~/Workspace_1'
 alias wss='cd ~/Workspace2'
 alias sag='sudo apt-get'
 alias mount='mount |column -t'
@@ -105,6 +126,7 @@ alias c='clear'
 
 ## get rid of command not found ##
 alias gti='git'
+alias purr='pull --rebase'
 
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
@@ -169,6 +191,13 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
+#system
+alias restart-plasma='bash ~/Scripts/restartPlasma.sh'
+alias vm='virsh'
+alias vml='virsh list --all' 
+
+#fun
+alias pileouface='bash ~/Documents/pileouface.sh'
 
 #Personal env variables
 export CHROME_BIN='/usr/bin/chromium-browser'
@@ -199,3 +228,4 @@ fi
 
 export NVM_DIR="/home/tcc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
