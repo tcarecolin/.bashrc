@@ -99,8 +99,12 @@ alias dcon="docker-compose up --force-recreate -d";
 alias dcoff="docker-compose down -v --remove-orphans"
 alias dckill="docker-compose down --rmi all -v --remove-orphans";
 alias doxit="docker exec -it"
-alias kc="kafkacat"
 alias dockerprune="docker system prune; docker network prune; docker volume prune"
+
+# Sre aliases
+alias tf11='tf11'
+alias tf='terraform'
+alias kc="kafkacat"
 
 # ssh aliases
 
@@ -108,10 +112,6 @@ alias dockerprune="docker system prune; docker network prune; docker volume prun
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Sre aliases
-alias tf11='tf11'
-alias tf='terraform'
 
 #Personal aliases
 ### Get os name via uname ###
@@ -162,7 +162,7 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 ## Get server cpu info ##
 alias cpuinfo='lscpu'
 ## older system use /proc/cpuinfo ##
-##alias cpuinfo='less /proc/cpuinfo' ## 
+##alias cpuinfo='less /proc/cpuinfo' ##
 ## get GPU ram on desktop / laptop##
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
@@ -194,7 +194,7 @@ alias chgrp='chgrp --preserve-root'
 #system
 alias restart-plasma='bash ~/Scripts/restartPlasma.sh'
 alias vm='virsh'
-alias vml='virsh list --all' 
+alias vml='virsh list --all'
 
 #fun
 alias pileouface='bash ~/Documents/pileouface.sh'
